@@ -5,8 +5,7 @@ const Notice = require('../models/Notice')
 router.get('/', async (req, res) => {
   try{
     const notices = await Notice.findAll();
-    console.log(notices);
-    res.redirect('/');
+    res.render('notices', { notices: notices.map(notice => notice.toJSON()) })
   } catch(error) {
     console.log(error);
   }
