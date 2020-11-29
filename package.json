@@ -1,0 +1,22 @@
+{
+  "name": "blue_nodejs_sequelize_mysql",
+  "version": "1.0.0",
+  "description": "NodeJS with sequelize",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "sequelize",
+    "nodejs",
+    "mysql",
+    "postgres"
+  ],
+  "author": "Blue Park",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.6"
+  }
+}
