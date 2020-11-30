@@ -1,12 +1,12 @@
-const { Sequelize } = require('sequelize');
+const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
 const Notice = sequelize.define('Notice', {
   title: {
-    type: Sequelize.STRING
+    type: DataTypes.STRING
   },
   content: {
-    type: Sequelize.STRING
+    type: DataTypes.STRING
   }
 })
 
