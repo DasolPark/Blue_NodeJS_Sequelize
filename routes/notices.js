@@ -63,4 +63,21 @@ router.get('/delete', async (req, res) => {
   }
 });
 
+// Update
+router.get('/update', async (req, res) => {
+  const id = 1;
+  const title = 'new title!';
+
+  try {
+    Notice.update({ title }, {
+      where: {
+        id
+      }
+    });
+    res.redirect('/notices');
+  } catch (error) {
+    console.log(error);
+  }
+})
+
 module.exports = router;
