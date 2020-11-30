@@ -47,4 +47,20 @@ router.post('/add', async (req, res) => {
   }
 });
 
+// Delete
+router.get('/delete', async (req, res) => {
+  const id = 2;
+
+  try {
+    await Notice.destroy({
+      where: {
+        id
+      }
+    });
+    res.redirect('/notices');
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 module.exports = router;
